@@ -46,7 +46,7 @@ function Home() {
       <div className="messages-me">
         <h2 className="welcome-message">
           {currentWelcomeMessage}
-          <span className={`wave-emoji ${shouldShake ? 'shake-animation' : ''}`}>👋</span>
+          <span className={`wave-emoji ${shouldShake ? 'shake-animation' : ''}`}></span>
         </h2>
         <h4 className="my-name">HI, I'M <span className="my--name">EMRAN</span></h4>
         <img className='my-image' src='https://randomuser.me/api/portraits/men/1.jpg' alt='my-image' />

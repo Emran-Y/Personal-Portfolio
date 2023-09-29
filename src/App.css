@@ -10,13 +10,17 @@ body {
   font-family: karla;
   background-color: #FCDE21;
   overflow-x: hidden;
+  position: relative;
+}
+html{
+  scroll-behavior:smooth;
 }
 
 /* styling header */
 
 /* color: #FCDE21; */
 
-.header {
+.nav {
   width: 100vw;
   background-color: black;
   height: 130px;
@@ -25,11 +29,103 @@ body {
   align-items: center;
   padding: 1em;
   padding-right: 2em;
+  position: fixed;
+  inset: 0;
 }
 
 .titles {
   max-width: 50%;
 }
+li{
+  list-style: none;
+}
+.nav a{
+  text-decoration: none;
+  color: white;
+}
+
+.nav--menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:2.5rem;
+  margin-right:20px ;
+}
+.nav--item{
+  font-size: 1.3rem;
+}
+.nav--toggler div{
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background-color: white;
+  transition: 0.5s ease-in;
+}
+.nav--toggler{
+  cursor: pointer;
+  display: none;
+}
+.nav--item{
+  position: relative;
+}
+.nav--link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFCA28; /* Replace with your desired color */
+  transition: width 0.3s ease-out;
+}
+
+.nav--link:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width:768px) {
+  .nav--toggler{
+    display: block;
+    /* position: absolute; */
+  }
+  .nav--menu {
+    position: fixed;
+    top: 130px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: black;
+    gap: 0.5px;
+    flex-direction: column;
+    padding-block: 1.7em;
+    padding-top: 0;
+    padding-bottom: 0.5em;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out;
+    border-top: 1px solid #FCDE21;
+  }
+  
+  .nav--active {
+    height: 63vh;
+    opacity: 1;
+  }
+    .nav--item{
+      font-size: 1.3rem;
+    }
+    .toggle .line1{
+      transform: rotate(-405deg) translate(-2px,6px);
+    }
+    .toggle .line2{
+      opacity: 0;
+    }
+    .toggle .line3{
+      transform: rotate(405deg) translate(-6px,-10px);
+    }
+}
+  
+
 
 .header-title {
   font-size: 3.3rem;
@@ -46,12 +142,12 @@ body {
 .Navbar {
   color: #fff;
   font-size: 2rem;
+  justify-self: flex-end;
+
 }
 
-/* Styling Home */
-
 .about-me {
-  padding-top: 50px;
+  padding-top: 160px;
   background-color: #FCDE21;
   width: 100vw;
 }
@@ -202,6 +298,7 @@ body {
   max-width: 90%;
   margin: 0 auto;
   margin-bottom: 30px;
+
 }
 
 .about-title{
@@ -514,6 +611,7 @@ body {
   border: none;
   border-radius: 5px;
   font-family: karla;
+  outline: none;
 }
 .text-area{
   resize: none;
@@ -525,6 +623,8 @@ body {
   font-family: karla;
   height: 200px;
   margin-bottom: 20px;
+  border-radius: 5px;
+  outline: none;
 }
 .submit-btn{
   border: none;
@@ -536,7 +636,23 @@ body {
   border-radius: 5px;
   background-color: black;
   color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 
+}
+.submit-btn:hover{
+  transform: scale(1.2);
+}
+.sent-message{
+  font-size: 1rem;
+  margin-bottom: 10px;
+  /* color: #b3912d; */
+}
+.sending-message{
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  color: #F24E1E;
 }
 
 /* styling footer */
