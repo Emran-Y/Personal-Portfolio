@@ -48,11 +48,11 @@ li{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap:2.5rem;
+  gap:2rem;
   margin-right:20px ;
 }
 .nav--item{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .nav--toggler div{
   width: 2.5rem;
@@ -82,15 +82,29 @@ li{
 .nav--link:hover::after {
   width: 100%;
 }
+.nav--link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar-icons{
+  margin-right:3px ;
+}
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:1040px) {
+  .nav{
+    position: static;
+  }
+  .about-me{
+    padding-top: 50px;
+  }
   .nav--toggler{
     display: block;
     /* position: absolute; */
   }
   .nav--menu {
-    position: fixed;
-    top: 130px;
+    position: absolute;
+    top: 120px;
     right: 0;
     left: 0;
     width: 100%;
@@ -104,7 +118,7 @@ li{
     padding-bottom: 0.5em;
     opacity: 0;
     transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out;
-    border-top: 1px solid #FCDE21;
+    /* border-top: 1px solid #FCDE21; */
   }
   
   .nav--active {
@@ -112,10 +126,10 @@ li{
     opacity: 1;
   }
     .nav--item{
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
     .toggle .line1{
-      transform: rotate(-405deg) translate(-2px,6px);
+      transform: rotate(-405deg) translate(-4px,6px);
     }
     .toggle .line2{
       opacity: 0;
@@ -150,6 +164,11 @@ li{
   padding-top: 160px;
   background-color: #FCDE21;
   width: 100vw;
+}
+@media screen and (max-width:768px) {
+  .about-me{
+    padding-top: 50px;
+  }
 }
 
 .messages-me {
@@ -650,8 +669,8 @@ li{
 }
 .sending-message{
   font-size: 0.9rem;
-  margin-bottom: 5px;
-  margin-left: 10px;
+  margin-bottom: 12px;
+  /* margin-left: 10px; */
   color: #F24E1E;
 }
 

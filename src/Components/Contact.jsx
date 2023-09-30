@@ -15,6 +15,12 @@ function Contact() {
     const [sent, setSent] = React.useState(false);
     const [loading,setLoading] = React.useState(false)
     const [disable,setDisable] = React.useState(true)
+    const [loadMessag,setLoadMessage] = React.useState('Sending...')
+    if(loading){
+      setTimeout(() => {
+        setLoadMessage('Failed to send check your connection')
+      },6000)
+    }
     React.useEffect(() => {
         if(data.Name && data.Email && data.Message){
             setDisable(false)
@@ -85,7 +91,7 @@ function Contact() {
             <input required type='email' value={data.Email} onChange={(e) => handleChange(e)} name='Email' className='Name'placeholder='Your Email'/>
             <textarea required placeholder='Your Message' value={data.Message} onChange={(e) => handleChange(e)} name='Message' className='text-area'></textarea>
             { sent ? 
-            <h2 className='sent-message'>Thank you for your message. I have received it and will respond to you promptly.</h2>: loading && <h2 className='sending-message'>Sending...</h2>}
+            <h2 className='sent-message'>Thank you for your message. I have received it and will respond to you promptly.</h2>: loading && <h2 className='sending-message'>{loadMessag}</h2>}
             <button disabled={disable} onClick={() => setLoading(true)} type='submit' className='submit-btn'>Submit</button>
         </form>
     </div>
