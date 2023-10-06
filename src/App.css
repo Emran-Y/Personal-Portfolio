@@ -332,6 +332,20 @@ li{
   font-weight: 100;
 }
 
+@media(min-width: 768px){
+  /* .about-me{
+    padding-bottom: 60px;
+  } */
+  .about{
+    max-width: 50%;
+    line-height: 200%;
+    padding-block: 50px;
+  }
+  .about-title{
+    font-size: 2.5rem;
+  }
+}
+
 
 /* styling skill */
 
@@ -424,6 +438,28 @@ li{
   font-size: 0.8rem;
   color: rgb(218, 208, 208);
 }
+
+@media(min-width:768px){
+  .skill{
+    padding:70px
+  }
+  .skills-cont{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .skill{
+    padding-top: 130px;
+    padding-bottom: 100px;
+  }
+  .skills{
+    gap:1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .skill-title{
+    font-size: 2.5rem;
+  }
+
+}
 .projects{
   background-color: black;
   color: white;
@@ -450,6 +486,22 @@ li{
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   justify-content: center;
   gap: 1em;
+}
+@media(min-width:768px){
+  .projects-cont{
+    width: 60%;
+    margin: 0 auto;
+  }
+  .projects{
+    padding-block: 100px;
+  }
+  .projects-title-big{
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  .projects-cont{
+    gap:1.5em;
+  }
 }
 
 .project{

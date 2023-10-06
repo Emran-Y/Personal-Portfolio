@@ -20,7 +20,7 @@ import {BsBoxArrowUpRight} from 'react-icons/bs'
 function Projects() {
   return (
     <div id='projects' className='projects'>
-        <h2 className='projects-title'>Personal Projects </h2>
+        <h2 className='projects-title projects-title-big'>Personal Projects </h2>
         <p className="projects-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum tenetur esse velit ipsum culpa dicta.</p>
         <div className="projects-cont">
           <section className="project">
