@@ -4,7 +4,8 @@ import { FiTwitter } from 'react-icons/fi';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsDownload } from 'react-icons/bs';
-
+import myImage from '../Images/_DSC0136.jpeg'
+import myCv from '../Certificates/EmranCv.pdf'
 function Home() {
   const welcomeMessages = ['Welcome!', 'Bienvenue!', 'Willkommen!', 'ようこそ！', 'أهلاً وسهلاً!'];
   const skills = ['Software', 'Front-end', 'UI/UX', 'Network'];
@@ -49,7 +50,7 @@ function Home() {
           <span className={`wave-emoji ${shouldShake ? 'shake-animation' : ''}`}></span>
         </h2>
         <h4 className="my-name">HI, I'M <span className="my--name">EMRAN</span></h4>
-        <img className='my-image' src='https://randomuser.me/api/portraits/men/1.jpg' alt='my-image' />
+        <img className='my-image' src={myImage} alt='my-image' />
         <h3 className="about-me-message">YOUR FRIENDLY NEIGHBORHOOD EXTRAORDINAIRE <span className='about-me--message'>{currentSkill}</span> ENGINEER</h3>
         <div className='social-media'>
           <a href='https://www.linkedin.com/in/emran-yonas-yimer-230192232/'><AiOutlineLinkedin /></a>
@@ -60,7 +61,8 @@ function Home() {
       </div>
       <div className='about-me-buttons'>
         <button className='about-hire-me'>Hire me</button>
-        <button className='about-download-my-cv'><span className='download-icon'><BsDownload /></span> Download my CV</button>
+        {/* <button className='about-download-my-cv'> Download my CV</button> */}
+        <a href={myCv} className='about-download-my-cv' download><span className='download-icon'><BsDownload /> Download my CV</span></a>
       </div>
       <div className='the-line'></div>
     </main>

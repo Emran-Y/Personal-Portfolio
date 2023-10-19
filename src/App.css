@@ -221,6 +221,8 @@ li{
 .my-image {
   border-radius: 50%;
   margin-bottom: 10px;
+  height: 170px;
+  width: 170px;
 }
 
 .about-me-message {
@@ -290,6 +292,8 @@ li{
   align-items: center;
   width: 60%;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .download-icon {
